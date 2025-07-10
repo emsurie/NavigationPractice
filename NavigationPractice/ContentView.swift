@@ -9,11 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
+        //A must have if you would like to navigate to different files on the user pov
         NavigationStack{
             VStack{
                 Text("This is the root view.")
-                NavigationLink(destination: Text("You've arrived to the Second view")) {
-                    Text("Click Me!!")
+                //Will direct the user to the SecondView page/file
+                NavigationLink(destination: SecondView()) {
+                    Text("About")
+                }
+                
+                NavigationLink(destination: ContactView()){
+                    Text("Contact 📞")
+                }
+                
+                NavigationLink(destination: HelpView()){
+                    Text("Help")
                 }
             }
         }
