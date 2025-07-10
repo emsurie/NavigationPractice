@@ -12,6 +12,9 @@ struct ContentView: View {
         NavigationStack{
             VStack{
                 Text("This is the root view.")
+                NavigationLink(destination: Text("You've arrived to the Second view")) {
+                    Text("Click Me!!")
+                }
             }
         }
     }
